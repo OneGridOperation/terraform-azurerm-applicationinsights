@@ -22,9 +22,9 @@ resource "azurerm_application_insights" "application_insights" {
   daily_data_cap_notifications_enabled = var.daily_data_cap_notifications_enabled
   retention_in_days                    = var.retention_in_days
   sampling_percentage                  = var.sampling_percentage
-  disable_ip_masking                   = var.disable_ip_masking
+  ip_masking_enabled                   = var.ip_masking_enabled
   workspace_id                         = var.workspace_id != null ? var.workspace_id : null
-  local_authentication_disabled        = var.local_authentication_disabled
+  local_authentication_enabled         = var.local_authentication_enabled
   internet_ingestion_enabled           = var.internet_ingestion_enabled
   internet_query_enabled               = var.internet_query_enabled
   force_customer_storage_for_profiler  = var.force_customer_storage_for_profiler

@@ -119,9 +119,9 @@ variable "sampling_percentage" {
   type        = number
 }
 
-variable "disable_ip_masking" {
-  description = "(Optional) By default the real client IP is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client IP. Defaults to `false`."
-  default     = false
+variable "ip_masking_enabled" {
+  description = "Optional) By default the real client IP is masked as 0.0.0.0 in the logs. Set this argument to false to disable masking and log the real client IP."
+  default     = true
   type        = bool
 }
 
@@ -130,9 +130,9 @@ variable "workspace_id" {
   type        = string
 }
 
-variable "local_authentication_disabled" {
-  description = "(Optional) Disable Non-Azure AD based Auth. Defaults to `false`."
-  default     = false
+variable "local_authentication_enabled" {
+  description = "(Optional) Whether Non-Azure AD based Auth is enabled."
+  default     = true
   type        = bool
 }
 
