@@ -25,7 +25,7 @@ jobs:
     name: "Terraform"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6.0.3
       - name: "Inject Terraform Documentation"
         uses: terraform-docs/gh-actions@v1
         with:
@@ -34,9 +34,9 @@ jobs:
           output-method: inject
           git-push: "true"
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v4
         with:
-          terraform_version: 1.8.2
+          terraform_version: "<2.0.0"
       - name: Terraform Format Check
         run: terraform fmt -check
         id: fmt
