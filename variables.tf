@@ -87,9 +87,9 @@ variable "daily_data_cap_in_gb" {
   type        = number
 }
 
-variable "daily_data_cap_notifications_disabled" {
-  description = "(Optional) Specifies if a notification email will be send when the daily data volume cap is met."
-  default     = false
+variable "daily_data_cap_notifications_enabled" {
+  description = "Optional) Whether a notification email will be sent when the daily data volume cap is met."
+  default     = true
   type        = bool
 }
 
